@@ -1,0 +1,3 @@
+C:/Users/orlan/CLionProjects/UFO/cmake-build-debug/CMakeFiles/UFO.dir
+C:/Users/orlan/CLionProjects/UFO/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/orlan/CLionProjects/UFO/cmake-build-debug/CMakeFiles/rebuild_cache.dir
