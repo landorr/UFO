@@ -42,7 +42,7 @@ std::vector<std::string> play_game() {
 // Main section of the game. Initialized to 7 maximum tries to easily display remaining tries
 void guess(std::vector<std::string>& play_game_value) {
     int guess_index = 7;
-    std::string guess;
+    char guess;
 
     // Repeat while the codeword is not guessed and there are guesses remaining
     while (play_game_value[0] != play_game_value[1] && guess_index > 0) {
@@ -51,13 +51,13 @@ void guess(std::vector<std::string>& play_game_value) {
 
         // Check codeword char by char
         for (int i = 0; i < play_game_value[0].size(); i++) {
-            if (guess[0] == play_game_value[0][i]) {
+            if (guess == play_game_value[0][i]) {
                 play_game_value[1][i] = play_game_value[0][i]; // Reveal correct guess
             }
         }
 
         // Reduction of total guesses if the guess is incorrect
-        if (!std::count(play_game_value[0].begin(), play_game_value[0].end(), guess[0])) {
+        if (!std::count(play_game_value[0].begin(), play_game_value[0].end(), guess)) {
             guess_index--; // Decrease remaining guesses
             std::cout << "Wrong guess!\n";
             std::cout << "Remaining guesses: " << guess_index << "\n" << std::endl; // Only prints remaining guesses if the number changes
